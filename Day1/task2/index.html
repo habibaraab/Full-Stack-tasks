@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Registration Form</title>
+<title>Registration Form - Double Borders (HTML Only)</title>
 </head>
 <body>
 
-<table border="6" cellpadding="5" cellspacing="0" 
-       style="width:500px; border-collapse:collapse; 
-              margin: 20px auto; padding: 15px; background-color: #ffffff;">
+<table border="1" cellpadding="5" cellspacing="4" width="500">
   <thead>
     <tr>
-      <th colspan="2" style="text-align:center;"><h3>registration Form</h3></th>
+      <th colspan="2" align="center"><h3>registration Form</h3></th>
     </tr>
   </thead>
   <tbody>
@@ -48,7 +46,7 @@
       </td>
     </tr>
     <tr>
-      <td rowspan="2">Favorites</td>
+      <td rowspan="2" valign="top">Favorites</td>
       <td>
         <input type="checkbox" id="football" name="favorites" value="football"> <label for="football">football</label>
         <input type="checkbox" id="basketball" name="favorites" value="basketball"> <label for="basketball">basketball</label><br>
@@ -62,11 +60,11 @@
       <td></td>
     </tr>
     <tr>
-      <td>description</td>
+      <td valign="top">description</td>
       <td><textarea name="description" rows="5" cols="48"></textarea></td>
     </tr>
     <tr>
-      <td colspan="2" style="text-align:center;">
+      <td colspan="2" align="center">
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>
       </td>
