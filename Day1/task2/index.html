@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+</head>
+<body>
+
+<table border="6" cellpadding="5" cellspacing="0" 
+       style="width:500px; border-collapse:collapse; 
+              margin: 20px auto; padding: 15px; background-color: #ffffff;">
+  <thead>
+    <tr>
+      <th colspan="2" style="text-align:center;"><h3>registration Form</h3></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="30%">first name</td>
+      <td><input type="text" name="firstName" size="50"></td>
+    </tr>
+    <tr>
+      <td>Last name</td>
+      <td><input type="text" name="lastName" size="50"></td>
+    </tr>
+    <tr>
+      <td>User name</td>
+      <td><input type="text" name="userName" size="50"></td>
+    </tr>
+    <tr>
+      <td>Pass</td>
+      <td><input type="password" name="password" size="50"></td>
+    </tr>
+    <tr>
+      <td>Track</td>
+      <td>
+        <select name="track">
+          <option value="BI">BI</option>
+          <option value="SD">SD</option>
+          <option value="CS">CS</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td>
+        <input type="radio" id="male" name="gender" value="male"> <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female"> <label for="female">Female</label>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2">Favorites</td>
+      <td>
+        <input type="checkbox" id="football" name="favorites" value="football"> <label for="football">football</label>
+        <input type="checkbox" id="basketball" name="favorites" value="basketball"> <label for="basketball">basketball</label><br>
+        <input type="checkbox" id="games" name="favorites" value="games"> <label for="games">games</label>
+        <input type="checkbox" id="reading" name="favorites" value="reading"> <label for="reading">reading</label><br>
+        <input type="checkbox" id="swimming" name="favorites" value="swimming"> <label for="swimming">swimming</label><br>
+        <input type="checkbox" id="travel" name="favorites" value="travel"> <label for="travel">Trave</label>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr>
+      <td>description</td>
+      <td><textarea name="description" rows="5" cols="48"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align:center;">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <input type="file" name="uploadedFile">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
