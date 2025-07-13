@@ -30,6 +30,7 @@
             resetBtn.classList.add('hidden');
         }
 
+        startGame();
         function handleAnswer(answer) {
             if (cur === 1) {
                 if (answer === 'yes') {
