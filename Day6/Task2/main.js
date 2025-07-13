@@ -19,6 +19,5 @@
             }
             out.textContent = `"${result}"`;
         }
-            const num = document.getElementById('input');
-
-            num.addEventListener('input',ch);
+           const out = document.getElementById('out');
+            num.addEventListener('out',ch);

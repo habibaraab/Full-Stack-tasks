@@ -7,23 +7,23 @@
         const noBtn = document.getElementById('noBtn');
         const resetBtn = document.getElementById('resetBtn');
 
-        let currentStage = 1;
+        let cur = 1;
         const questions = {
             fly: "Do you fly?",
             wild: "Are You Wild?",
             sea: "Do you live under sea?"
         };
         const results = {
-            eagle: { name: "Eagle", image: "https://img.icons8.com/plasticine/200/eagle.png" },
-            parrot: { name: "Parrot", image: "https://img.icons8.com/plasticine/200/parrot.png" },
+            eagle: { name: "Eagle", image: "images/6057813250b001d3b8ef03df0051c901.jpg" },
+            parrot: { name: "Parrot", image: "images/images.jpeg" },
             shark: { name: "Shark", image: "https://img.icons8.com/plasticine/200/shark.png" },
-            dolphin: { name: "Dolphin", image: "https://img.icons8.com/plasticine/200/dolphin.png" },
+            dolphin: { name: "Dolphin", image: "images/png-transparent-cartoon-dolphin-lovely-dolphin-friend-thumbnail.png" },
             lion: { name: "Lion", image: "https://img.icons8.com/plasticine/200/lion.png" },
             cat: { name: "Cat", image: "https://img.icons8.com/plasticine/200/cat.png" }
         };
 
         function startGame() {
-            currentStage = 1;
+            cur = 1;
             questionBox.textContent = questions.fly;
             gameArea.classList.remove('hidden');
             resultArea.classList.add('hidden');
@@ -31,33 +31,33 @@
         }
 
         function handleAnswer(answer) {
-            if (currentStage === 1) {
+            if (cur === 1) {
                 if (answer === 'yes') {
-                    currentStage = 'fly_wild';
+                    cur = 'fly_wild';
                     questionBox.textContent = questions.wild;
                 } else { 
-                    currentStage = 'sea';
+                    cur = 'sea';
                     questionBox.textContent = questions.sea;
                 }
             } 
-            else if (currentStage === 'fly_wild') {
+            else if (cur === 'fly_wild') {
                 if (answer === 'yes') showResult(results.eagle);
                 else showResult(results.parrot);
             }
-            else if (currentStage === 'sea') {
+            else if (cur === 'sea') {
                 if (answer === 'yes') {
-                    currentStage = 'sea_wild';
+                    cur = 'sea_wild';
                     questionBox.textContent = questions.wild;
                 } else { // no
-                    currentStage = 'land_wild';
+                    cur = 'land_wild';
                     questionBox.textContent = questions.wild;
                 }
             }
-            else if (currentStage === 'sea_wild') {
+            else if (cur === 'sea_wild') {
                 if (answer === 'yes') showResult(results.shark);
                 else showResult(results.dolphin);
             }
-            else if (currentStage === 'land_wild') {
+            else if (cur === 'land_wild') {
                 if (answer === 'yes') showResult(results.lion);
                 else showResult(results.cat);
             }
