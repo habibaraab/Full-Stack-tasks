@@ -3,10 +3,7 @@
             const out = document.getElementById('out');
             const num = Number(input.value);
 
-            if (input.value === '' || isNaN(num)) {
-                out.textContent = '""';
-                return;
-            }
+          
             let result = '';
             if (num % 15 === 0) {
                 result = 'fizz buzz';
