@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script src="main.js"></script>
+
+    <div class="container">
+        <header class="header">
+            <h1>Character Game</h1>
+        </header>
+        <p class="description">
+            Write a function that take a sentence and a letter to search for it in the given sentence and return its locations in that sentence.
+        </p>
+
+        <div class="main-content">
+            <div class="label input-label">Input</div>
+            <div class="fields-container">
+                <div class="field">
+                    <span class="field-name">String</span>
+                    <input type="text" id="input" oninput="find()" value="This is javaScript">
+                </div>
+                <div class="field">
+                    <span class="field-name">Letter</span>
+                    <input type="text" id="letter" oninput="find()" value="i" maxlength="1">
+                </div>
+            </div>
+
+            <div class="label output-label">Output</div>
+            <div class="fields-container">
+                <div class="field">
+                    <span class="field-name">array</span>
+                    <div id="out">[2, 5, 15]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

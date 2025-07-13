@@ -1,0 +1,86 @@
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #fdfdfd;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+       
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 40px 20px;
+            align-items: center;
+        }
+
+        .label {
+            padding: 10px 20px;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        .input-label { background-color: #27ae60; } 
+        .output-label { background-color: #2980b9; } 
+        .notes-label { background-color: #d35400; } 
+        
+        .input-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .input-area .number-label {
+            font-size: 1.2em;
+        }
+        
+        #input {
+            border: 2px solid #27ae60; 
+            padding: 15px;
+            font-size: 1.8em;
+            font-weight: bold;
+            border-radius: 5px;
+            width: 80px;
+            text-align: center;
+        }
+
+        .output-area {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .light {
+            text-align: center;
+        }
+        
+        .circle {
+            width: 90px;
+            height: 90px;
+            background-color: #bdc3c7; 
+            border-radius: 50%;
+            transition: background-color 0.3s ease; 
+        }
+
+        .light-blue { background-color: #3498db; }
+        .light-yellow { background-color: #f1c40f; }
+        .light-red { background-color: #e74c3c; }
+
+        .light-text {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        

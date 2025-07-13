@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="main.js"></script>
+
+    <div class="container">
+
+        <header class="header">
+            <h1>Ready Go Game</h1>
+        </header>
+
+        <p class="description">
+            Write a function that follows the rule below. Take the given number and light up the corresponding circle.
+        </p>
+
+        <div class="main-content">
+            <div class="label input-label">Input</div>
+            <div class="input-area">
+                <p class="number-label">Number</p>
+                <input type="number" id="input" oninput="updateLights()" min="1" max="3">
+            </div>
+
+            <div class="label output-label">Output</div>
+            <div class="output-area">
+                <div class="light">
+                    <div class="circle" id="light1"></div>
+                    <p class="light-text">Ready</p>
+                </div>
+                <div class="light">
+                    <div class="circle" id="light2"></div>
+                    <p class="light-text">Steady</p>
+                </div>
+                <div class="light">
+                    <div class="circle" id="light3"></div>
+                    <p class="light-text">Go</p>
+                </div>
+            </div>
+
+          
+        </div>
+    </div>
+
+</body>
+</html>
