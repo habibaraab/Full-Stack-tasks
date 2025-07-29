@@ -1,0 +1,66 @@
+{% load static %} <!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details: {{ product.name }}</title>
+    <style>
+        body { 
+             padding: 20px; 
+             background-color: #f9f9f9;
+             }
+        .container { 
+            max-width: 800px;
+             margin: auto; 
+             background-color: white; 
+             padding: 25px; 
+             border: 1px solid #ddd;
+               }
+        img {
+             max-width: 50%; 
+             height: auto; 
+             border-radius: 5px; 
+             margin-bottom: 20px; }
+        h1 { color: #333; }
+        ul { 
+            list-style-type: none; 
+            padding: 0; }
+        li { 
+            margin-bottom: 10px;
+             font-size: 1.1em; }
+        .back-link { 
+            display: inline-block;
+             margin-top: 20px; 
+             padding: 10px 20px; 
+             background-color: #007bff; 
+             color: white; text-decoration: none; 
+             border-radius: 5px; }
+        .back-link:hover {
+             background-color: #0056b3;
+             }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ product.name }}</h1>
+        
+        <img src="{% static product.image_url %}" alt="image {{ product.name }}">
+        
+        <h3>Product Details:</h3>
+        <ul>
+            <li><strong>ID:</strong> {{ product.id }}</li>
+            
+            <li><strong>Name:</strong> {{ product.name }}</li>
+            
+            <li><strong>Type:</strong> {{ product.type }}</li>
+
+            <li><strong>Price:</strong> {{ product.price|floatformat:2 }} EGP</li>
+            
+            <li><strong>Description:</strong> {{ product.description }}</li>
+        </ul>
+
+        <a href="{% url 'product:product_list' %}" class="back-link">
+            Back
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+    <style>
+        body {
+          padding: 20px;
+           }
+        table {
+         width: 100%;
+          border-collapse: collapse; 
+          }
+
+        th, td { 
+        border: 1px solid #ddd; 
+        padding: 8px;
+        text-align: left; }
+        th {
+             background-color: #f2f2f2;
+             }
+        a { 
+            text-decoration: none; 
+            color: #007bff;
+         }
+        a:hover {
+             text-decoration: underline;
+             }
+    </style>
+</head>
+<body>
+    <h1>All Products</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Price (EGP)</th>
+               <th>Description</th>
+
+              
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ product.id }}</td>
+                <td><a href="{% url 'product:product_detail' product.id %}">{{ product.name }}</a></td>
+                <td>{{ product.type }}</td>
+                <td>{{ product.price|floatformat:2 }}</td>
+                <td>{{ product.description}}</td>
+                <td>
+                    
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
