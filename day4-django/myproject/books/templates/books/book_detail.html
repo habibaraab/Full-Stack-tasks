@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Details</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+       
+        .actions a {
+         
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            display: inline-block;
+            transition: opacity 0.3s;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ object.name }}</h1>
+        <p><strong>Type:</strong> {{ object.get_book_type_display }}</p>
+        <hr style="border-color: #eee;">
+        <div class="actions">
+            <a href="{% url 'book-update' object.pk %}" class="btn-edit">Edit</a>
+            <a href="{% url 'book-delete' object.pk %}" class="btn-delete">Delete</a>
+            <a href="{% url 'book-list' %}" class="btn-back">Back to List</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Books</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<style>
+
+    .container {
+        max-width: 900px;
+        margin: 40px ;
+        padding: 25px;
+       
+    }
+
+
+    .books-table {
+        width: 100%;
+    }
+
+    .books-table th, .books-table td {
+        padding: 12px;
+        text-align: left;
+    }
+    .books-table thead {
+        background-color: #f8f9fa;
+    }
+
+
+</style>
+
+<body>
+
+    <div class="container">
+        <h1>All Books</h1>
+
+        <a href="{% url 'book-create' %}" class="btn btn-add">Add New Book</a>
+
+        <table class="books-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in object_list %}
+                <tr>
+                    <td>{{ book.id }}</td>
+                    <td>{{ book.name }}</td>
+                    <td>{{ book.get_book_type_display }}</td>
+                    <td class="actions">
+                        <a href="{% url 'book-detail' book.pk %}" class="action-link">View</a>
+                                        <a href="{% url 'book-update' book.pk %}" class="action-link">Edit</a>
+                <form action="{% url 'book-delete' book.pk %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="action-link delete-button">Delete</button>
+                    </form>                    </td>
+                                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4">No books found.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

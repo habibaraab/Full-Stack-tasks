@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm Deletion</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+      
+        .actions button, .actions a {
+           
+            padding: 12px 30px;
+            text-decoration: none;
+        
+        }
+        .actions button { background-color: #dc3545; }
+        .actions a { background-color: #6c757d; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Are you sure?</h1>
+        <p>You are about to delete the book: <strong>"{{ object.name }}"</strong></p>
+        <form method="post" style="display: inline;">
+            {% csrf_token %}
+            <div class="actions">
+                <button type="submit">Yes, delete</button>
+                <a href="{{ object.get_absolute_url }}">Cancel</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
